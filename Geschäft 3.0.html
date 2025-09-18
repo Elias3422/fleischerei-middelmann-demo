@@ -1,0 +1,355 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fleischerei Middelmann - Ihr Handwerk in Olfen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <button class="burger-menu" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+    <ul>
+      <li><a href="#about-us">Über uns</a></li>
+      <li><a href="#products">Produkte</a></li>
+      <li><a href="#gallery">Galerie</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-header">
+    <div class="header-content fade-in">
+      <h1>Fleischerei Middelmann</h1>
+      <p>Ihre Adresse für regionales Fleisch und Wurstwaren</p>
+    </div>
+  </header>
+
+  <!-- Hauptinhalt -->
+  <main class="main-content">
+    <section class="section fade-in" id="about-us">
+      <h2>Über uns</h2>
+      <p>
+        In unserer Fleischerei in Olfen legen wir größten Wert auf Qualität und Tradition. 
+        Wir beziehen unser Fleisch ausschließlich von regionalen Bauernhöfen und verarbeiten 
+        es mit Sorgfalt und Leidenschaft.
+      </p>
+    </section>
+
+    <section class="section fade-in" id="products">
+      <h2>Unsere Produkte</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x200.png?text=Wurst+Sortiment" alt="Wurst Sortiment">
+          <h3>Hausgemachte Wurst</h3>
+          <p>Feinste Wurstspezialitäten nach traditionellen Familienrezepten.</p>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x200.png?text=Frisches+Fleisch" alt="Frisches Fleisch">
+          <h3>Frisches Fleisch</h3>
+          <p>Täglich frisch für Sie von regionalen Höfen. Von Rind bis Schwein.</p>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x200.png?text=Grill+Paket" alt="Grill Paket">
+          <h3>Grillpakete</h3>
+          <p>Stellen Sie Ihr individuelles Grillpaket zusammen.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fade-in" id="gallery">
+      <h2>Unsere Galerie</h2>
+      <div class="gallery-grid">
+        <img src="https://via.placeholder.com/400x300.png?text=Fleisch+Theke" alt="Fleisch Theke">
+        <img src="https://via.placeholder.com/400x300.png?text=Zuschnitt" alt="Zuschnitt">
+        <img src="https://via.placeholder.com/400x300.png?text=Wurstwaren" alt="Wurstwaren">
+        <img src="https://via.placeholder.com/400x300.png?text=Kunde+im+Laden" alt="Kunde im Laden">
+      </div>
+    </section>
+
+    <section class="section fade-in" id="contact">
+      <h2>Kontakt</h2>
+      <div class="contact-layout">
+        <div class="contact-info">
+          <div class="contact-card">
+            <p><strong>Adresse:</strong> Kirchstraße 1, 59399 Olfen<br>
+            <strong>Telefon:</strong> 02595 / 9726889</p>
+            <a href="tel:025959726889" class="cta-button">Jetzt anrufen</a>
+          </div>
+          <div class="hours-card">
+            <h3>Öffnungszeiten</h3>
+            <ul>
+              <li><strong>Mo - Fr:</strong> 08:00 - 18:00 Uhr</li>
+              <li><strong>Sa:</strong> 08:00 - 13:00 Uhr</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3>Schreiben Sie uns!</h3>
+          <form action="#">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Nachricht:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" class="cta-button">Nachricht senden</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Fleischerei Middelmann. Alle Rechte vorbehalten.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html><style>/* ==============================
+   Variablen
+============================== */
+:root {
+    --primary-color: #8c2a2a;
+    --secondary-color: #f5f0e9;
+    --text-color: #333;
+    --light-gray: #f9f7f4;
+}
+
+/* ==============================
+   Basis
+============================== */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+/* ==============================
+   Navigation
+============================== */
+.main-nav {
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    padding: 1em 0;
+    transition: padding 0.3s ease;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.main-nav li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav li a:hover,
+.main-nav li a.active {
+    background-color: #a42c2c;
+    border-radius: 4px;
+}
+
+.main-nav.scrolled {
+    padding: 0.5em 0;
+}
+
+/* ==============================
+   Hero Header
+============================== */
+.hero-header {
+    background-image: url('https://via.placeholder.com/1500x800.png?text=Fleischerei+Middelmann');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 8em 1em;
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.header-content { position: relative; z-index:1; }
+
+.header-content h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 3.5em;
+    margin-bottom: 0.2em;
+}
+
+.header-content p { font-size: 1.5em; font-weight: 300; }
+
+/* ==============================
+   Animationen
+============================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.visible { opacity:1; transform: translateY(0); }
+
+/* ==============================
+   Sektionen
+============================== */
+.main-content { max-width: 1000px; margin: -3em auto 2em; padding:0 2em; }
+.section { background:#fff; padding:2em; margin-bottom:2em; box-shadow:0 5px 15px rgba(0,0,0,0.1); border-radius:10px; }
+.section h2 { color:var(--primary-color); font-family:'Merriweather', serif; text-align:center; margin-top:0; }
+
+/* ==============================
+   Produkte
+============================== */
+.product-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin-top:2em; text-align:center; }
+.product-card { background:var(--light-gray); padding:2em; border-radius:8px; transition: transform 0.4s ease, box-shadow 0.4s ease; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; }
+.product-card:hover { transform: translateY(-8px) rotateX(5deg); box-shadow:0 15px 30px rgba(0,0,0,0.1); }
+.product-card img { max-width:100%; border-radius:4px; }
+
+/* ==============================
+   Galerie
+============================== */
+.gallery-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:15px; margin-top:2em; }
+.gallery-grid img { width:100%; border-radius:8px; transition: transform 0.3s ease; }
+.gallery-grid img:hover { transform: scale(1.05); }
+
+/* ==============================
+   Kontakt
+============================== */
+.contact-layout { display:flex; flex-wrap:wrap; gap:30px; justify-content:center; }
+.contact-info,.contact-form { flex:1; min-width:300px; background:var(--light-gray); padding:2em; border-radius:10px; }
+.contact-form form { display:flex; flex-direction:column; }
+.contact-form input,.contact-form textarea { margin-bottom:1em; padding:0.8em; border:1px solid #ccc; border-radius:5px; font-family:inherit; }
+
+/* ==============================
+   CTA Button
+============================== */
+.cta-button { display:inline-block; background:var(--primary-color); color:#fff; padding:15px 30px; text-decoration:none; border-radius:5px; font-weight:bold; margin-top:15px; transition: background 0.3s ease; border:none; cursor:pointer; }
+.cta-button:hover { background:#a42c2c; }
+
+/* ==============================
+   Footer
+============================== */
+.footer { background:#333; color:#fff; text-align:center; padding:1.5em; }
+
+/* ==============================
+   Burger Menü mobil
+============================== */
+.burger-menu { display:none; flex-direction:column; justify-content:space-between; width:30px; height:22px; background:none; border:none; cursor:pointer; z-index:1100; position:absolute; top:15px; right:20px; }
+.burger-menu span { display:block; height:4px; width:100%; background:#fff; border-radius:2px; transition: all 0.3s ease; }
+.burger-menu.active span:nth-child(1) { transform: rotate(45deg) translateY(9px); }
+.burger-menu.active span:nth-child(2) { opacity:0; }
+.burger-menu.active span:nth-child(3) { transform: rotate(-45deg) translateY(-9px); }
+
+@media(max-width:768px){
+    .main-nav ul { position:fixed; top:60px; right:0; background:var(--primary-color); flex-direction:column; align-items:flex-start; width:200px; padding:1em; transform:translateX(100%); transition:transform 0.3s ease-out; }
+    .main-nav ul.open { transform:translateX(0); }
+    .burger-menu { display:flex; }
+    .main-nav li a { padding: 1em 1em; }
+}
+</style><script>// ===============================
+// Smooth Scroll für Navigation
+// ===============================
+const navList = document.querySelector('.main-nav ul');
+const burger = document.querySelector('.burger-menu');
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+    // Mobile Menü schließen nach Klick
+    navList.classList.remove('open');
+    burger.classList.remove('active');
+  });
+});
+
+// ===============================
+// Fade-In Animation beim Scrollen
+// ===============================
+const fadeElements = document.querySelectorAll('.fade-in');
+const fadeObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+fadeElements.forEach(el => fadeObserver.observe(el));
+
+// ===============================
+// Navigation schrumpfen beim Scrollen
+// ===============================
+const nav = document.querySelector('.main-nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+
+// ===============================
+// Scrollspy - Aktives Link markieren
+// ===============================
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.main-nav ul li a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 80;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute('id');
+    }
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+});
+
+// ===============================
+// Burger-Menü (mobil)
+// ===============================
+burger.addEventListener('click', () => {
+  burger.classList.toggle('active');
+  navList.classList.toggle('open');
+});</script>
