@@ -1,4 +1,4 @@
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<meta name='viewport' content='width=device-width, initial-scale=1'/><meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation -->
   <nav class="main-nav">
     <button class="burger-menu" aria-label="Menü öffnen">
       <span></span><span></span><span></span>
@@ -21,7 +20,6 @@
     </ul>
   </nav>
 
-  <!-- Hero -->
   <header class="hero-header">
     <div class="header-content fade-in">
       <h1>Fleischerei Middelmann</h1>
@@ -29,7 +27,6 @@
     </div>
   </header>
 
-  <!-- Hauptinhalt -->
   <main class="main-content">
     <section class="section fade-in" id="about-us">
       <h2>Über uns</h2>
@@ -88,6 +85,10 @@
             </ul>
           </div>
         </div>
+        <div style='height:300px;width:100%;'>
+          <iframe width="100%" height="300" src="https://maps.google.de/maps?hl=de&q=Fleischerei+Franz+Middelmann%20%20%20Robert-Bosch-Straße+13%20%20Olfen&t=TERRAIN&z=14&ie=utf8&iwloc=b&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style='height:300px;width:100%px;'></iframe>
+          <p style="text-align:right;  margin-top:-12px; line-height:10px; font-size:10px; line-height:10px;"><a href="https://on-projects.de/google-maps-generator/" style="font-size:10px;" target="_blank">Google Maps  Generator</a> <a href="https://on-projects.de/" style="font-size:10px;" target="_blank">on-projects</a></p>
+        </div>
 
         <div class="contact-form">
           <h3>Schreiben Sie uns!</h3>
@@ -105,14 +106,14 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 Fleischerei Middelmann. Alle Rechte vorbehalten.</p>
+    <p>© 2025 Fleischerei Middelmann. Alle Rechte vorbehalten.</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
-</html><style>/* ==============================
+</html>
+<style>/* ==============================
    Variablen
 ============================== */
 :root {
@@ -251,6 +252,13 @@ body {
 .contact-info,.contact-form { flex:1; min-width:300px; background:var(--light-gray); padding:2em; border-radius:10px; }
 .contact-form form { display:flex; flex-direction:column; }
 .contact-form input,.contact-form textarea { margin-bottom:1em; padding:0.8em; border:1px solid #ccc; border-radius:5px; font-family:inherit; }
+/* Neuer Container für die Karte, um sie im Flex-Layout anzupassen */
+.map-container { flex:1; min-width:300px; background:var(--light-gray); padding:2em; border-radius:10px; }
+
+/* Stellt sicher, dass die Karte responsive ist */
+.map-container iframe {
+    max-width: 100%;
+}
 
 /* ==============================
    CTA Button
@@ -352,4 +360,5 @@ window.addEventListener('scroll', () => {
 burger.addEventListener('click', () => {
   burger.classList.toggle('active');
   navList.classList.toggle('open');
-});</script>
+});
+</script>
