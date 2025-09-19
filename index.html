@@ -17,6 +17,7 @@
       <li><a href="#products">Produkte</a></li>
       <li><a href="#gallery">Galerie</a></li>
       <li><a href="#contact">Kontakt</a></li>
+      <li><a href="#reviews">Bewertungen</a></li>
     </ul>
   </nav>
 
@@ -28,6 +29,15 @@
   </header>
 
   <main class="main-content">
+    
+    <section class="section fade-in" id="reviews">
+      <h2>Was unsere Kunden sagen</h2>
+      <div class="reviews-container">
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-6459af11-c390-465f-96aa-3dc56ee29058" data-elfsight-app-lazy></div>
+      </div>
+    </section>
+
     <section class="section fade-in" id="about-us">
       <h2>Über uns</h2>
       <p>
@@ -104,8 +114,9 @@
         </div>
       </div>
     </section>
-  </main>
 
+  </main>
+  
   <footer class="footer">
     <p>© 2025 Fleischerei Middelmann. Alle Rechte vorbehalten.</p>
   </footer>
@@ -258,6 +269,12 @@ body {
 /* Stellt sicher, dass die Karte responsive ist */
 .map-container iframe {
     max-width: 100%;
+}
+
+/* NEUE CSS-REGEL für den Reviews-Container */
+.reviews-container {
+    max-height: 400px;
+    overflow-y: auto;
 }
 
 /* ==============================
